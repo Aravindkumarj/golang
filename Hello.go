@@ -7,8 +7,10 @@ import (
 const englishHelloPrefix = "Hello, "
 const spanishHelloPrefix = "Hola, "
 const frenchHelloPrefix = "Bonjour, "
+const tamilHelloPrefix = "Vanakkam, "
 const spanish = "Spanish"
 const french = "French"
+const tamil = "Tamil"
 
 func Hello(name, language string) string {
 	if name == "" {
@@ -21,10 +23,12 @@ func Hello(name, language string) string {
 		prefix = spanishHelloPrefix
 	case french:
 		prefix = frenchHelloPrefix
+	case tamil:
+		prefix = tamilHelloPrefix
 	}
 
 	return prefix + name
 }
 func main() {
-	fmt.Println(Hello("world", "Spanish"))
+	fmt.Println(Hello("Aravind", "Tamil"))
 }
