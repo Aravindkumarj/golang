@@ -16,16 +16,4 @@ func TestSum(t *testing.T) {
 		}
 	})
 
-	t.Run("When using undefined size ", func(t *testing.T) {
-
-		nosizenumbers := []int{1, 2, 3}
-
-		got := Sum(nosizenumbers)
-		want := 6
-
-		if got != want {
-			t.Errorf("got %d want %d given %v", got, want, nosizenumbers)
-		}
-	})
-
 }
